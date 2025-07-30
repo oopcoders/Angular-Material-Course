@@ -1,0 +1,40 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .content {
+        text-align: center;
+
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+            color: #e0e0e0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            color: #424242;
+        }
+
+        p {
+            margin: 1rem 0;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: #1976d2;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<h2>Edit Profile</h2>
+<form [formGroup]="form" (ngSubmit)="save()" class="form-grid">
+    <div class="full-width">
+        <label>Name</label>
+        <input formControlName="name">
+    </div>
+    <div class="full-width">
+        <label>Bio</label>
+        <textarea formControlName="bio"></textarea>
+    </div>
+
+    <div>
+        <button>Cancel</button>
+        <button [disabled]="form.invalid">Update</button>
+    </div>
+</form>

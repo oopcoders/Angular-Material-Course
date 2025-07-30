@@ -1,0 +1,29 @@
+.form-wrapper {
+    margin: auto;
+    padding-top: 20px;
+    width: 60%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.half-width {
+    grid-column: span 1;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+        width: 50%;
+    }
+}

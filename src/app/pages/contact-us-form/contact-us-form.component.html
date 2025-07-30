@@ -1,0 +1,53 @@
+<div class="form-wrapper">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Name:</label>
+            <input formControlName="name" required>
+
+            <label for="email">Email:</label>
+            <input formControlName="email" required type="email">
+
+        </div>
+
+        <div>
+            <label for="message">Message:</label>
+            <textarea formControlName="message"></textarea>
+        </div>
+
+
+        <div>
+            <label for="topics">Topic</label>
+            <select name="topics" id="topics">
+                <option value="support">Support</option>
+                <option value="sales">Sales</option>
+                <option value="feedback">Feedback</option>
+            </select>
+        </div>
+
+
+        <div>
+            <input formControlName="priority" type="radio" name="priority" value="low" id="low" />
+            <label for="low">Low</label>
+
+            <input formControlName="priority" type="radio" name="priority" value="medium" id="medium" />
+            <label for="medium">Medium</label>
+
+            <input formControlName="priority" type="radio" name="priority" value="high" id="high" />
+            <label for="high">high</label>
+        </div>
+
+        <div>
+            <input formControlName="subscribe" type="checkbox" name="subscribe" value="subscribe" id="subscribe" />
+            <label for="subscribe">Subscribe for updates</label>
+        </div>
+
+        <div class="form-field">
+            <label for="contact-date">Preferred Contact Date</label>
+            <input type="date" formControlName="contactDate" id="contact-date" name="contact-date">
+        </div>
+
+        <button type="submit" [disabled]="form.invalid">
+            Submit
+        </button>
+    </form>
+</div>

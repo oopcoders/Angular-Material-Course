@@ -1,0 +1,21 @@
+.under-construction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .content {
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff9800; // warning‑style accent
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #666;
+        }
+    }
+}
