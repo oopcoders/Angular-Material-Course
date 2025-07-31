@@ -23,5 +23,9 @@ html {
 	@include mat.theme((color: theme.$error-palette));
 }
 
+.text-error {
+	color: var(--mat-sys-error);
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
