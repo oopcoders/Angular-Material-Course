@@ -32,7 +32,7 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/rose-red.css",
+              "src/theme.css",
               "src/styles.scss"
             ],
             "scripts": []
