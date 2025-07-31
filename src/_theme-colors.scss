@@ -135,6 +135,8 @@ $_rest: (
 
 $primary-palette: map.merge(map.get($_palettes, primary), $_rest);
 $tertiary-palette: map.merge(map.get($_palettes, tertiary), $_rest);
+$secondary-palette: map.merge(map.get($_palettes, secondary), $_rest);
+$error-palette: map.merge(map.get($_palettes, error), $_rest);
 
 @function _high-contrast-value($light, $dark, $theme-type) {
   @if ($theme-type == light) {
@@ -146,7 +148,7 @@ $tertiary-palette: map.merge(map.get($_palettes, tertiary), $_rest);
   @if ($theme-type == color-scheme) {
     @return light-dark(#{$light}, #{$dark});
   }
-  
+
   @error 'Unknown theme-type #{$theme-type}. Expected light, dark, or color-scheme';
 }
 

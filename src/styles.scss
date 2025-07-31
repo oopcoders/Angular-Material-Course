@@ -10,5 +10,18 @@ html {
 		 @include theme.high-contrast-overrides('light');
 		}
 }
+
+.tertiary {
+	@include mat.theme((color: theme.$tertiary-palette));
+}
+
+.secondary {
+	@include mat.theme((color: theme.$secondary-palette));
+}
+
+.error {
+	@include mat.theme((color: theme.$error-palette));
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
