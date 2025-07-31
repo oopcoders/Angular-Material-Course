@@ -5,6 +5,10 @@
 html {
 	color-scheme: light;
 	@include mat.theme((color: theme.$primary-palette));
+
+	@media (prefers-contrast: more) {
+		 @include theme.high-contrast-overrides('light');
+		}
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
