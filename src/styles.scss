@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
+@use 'theme-colors' as theme;
 
 html {
 	color-scheme: light;
-	@include mat.theme((color: mat.$rose-palette));
+	@include mat.theme((color: theme.$primary-palette));
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
