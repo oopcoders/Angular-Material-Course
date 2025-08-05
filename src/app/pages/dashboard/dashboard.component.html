@@ -1,6 +1,36 @@
 <h2 class="text-error">Welcome!</h2>
 <p>This is a basic admin layout using Angular Material 19.</p>
+
+<h4>Toggle Button Component</h4>
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+	<mat-button-toggle value="bold">Bold</mat-button-toggle>
+	<mat-button-toggle value="italic">Italic</mat-button-toggle>
+	<mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>
+
+<h4>Button Component</h4>
+<p>Button Colors</p>
 <button mat-flat-button>Primary</button>
 <button mat-flat-button class="tertiary">Tertiary</button>
 <button mat-flat-button class="secondary">Secondary</button>
 <button mat-flat-button class="error">Error</button>
+
+<p>Basic Buttons</p>
+<button mat-button>Basic</button>
+<button mat-button disabled>Disabled</button>
+<a mat-button href="/">Link</a>
+
+<p>Flat Buttons</p>
+<button mat-flat-button>Basic</button>
+<button mat-flat-button disabled>Disabled</button>
+<a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+
+<p>Stroked Buttons</p>
+<button mat-stroked-button>Basic</button>
+<button mat-stroked-button disabled>Disabled</button>
+<a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+
+<p>Raised Buttons</p>
+<button mat-raised-button>Basic</button>
+<button mat-raised-button disabled>Disabled</button>
+<a mat-flat-raised href="https://www.google.com/" target="_blank">Link</a>

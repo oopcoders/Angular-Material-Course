@@ -6,26 +6,38 @@ html {
 	color-scheme: light;
 	@include mat.theme((color: theme.$primary-palette));
 
+	@include mat.theme-overrides((corner-full: 5px, corner-extra-large: 5px));
+
 	@media (prefers-contrast: more) {
-		 @include theme.high-contrast-overrides('light');
-		}
+		@include theme.high-contrast-overrides('light');
+	}
 }
 
 .tertiary {
 	@include mat.theme((color: theme.$tertiary-palette));
+	@include mat.theme-overrides((corner-full: 5px));
 }
 
 .secondary {
 	@include mat.theme((color: theme.$secondary-palette));
+	@include mat.theme-overrides((corner-full: 5px));
 }
 
 .error {
 	@include mat.theme((color: theme.$error-palette));
+	@include mat.theme-overrides((corner-full: 5px));
 }
 
 .text-error {
 	color: var(--mat-sys-error);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
