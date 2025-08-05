@@ -18,6 +18,18 @@ html {
 	}
 }
 
+.red {
+	@include mat.theme((color: mat.$red-palette ));
+}
+
+.green {
+	@include mat.theme((color: mat.$green-palette ));
+}
+
+.blue {
+	@include mat.theme((color: mat.$blue-palette ));
+}
+
 .tertiary {
 	@include mat.theme((color: theme.$tertiary-palette));
 	@include mat.button-overrides((filled-container-shape: 5px,

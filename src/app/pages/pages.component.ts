@@ -5,15 +5,17 @@ import { filter } from 'rxjs';
 import { ThemeService } from '../services/theme.service';
 import { FormsModule } from '@angular/forms';
 import { LoaderService } from '../services/loader.service';
+import { MatRadioModule } from '@angular/material/radio';
 
 @Component({
   selector: 'app-pages',
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, MatRadioModule],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss'
 })
 export class PagesComponent {
   breadcrumb = 'Dashboard'; // default fallback
+  selectedColor: 'green' | 'red' | 'blue' = 'green'; // default
 
 
   constructor(private router: Router, private route: ActivatedRoute,
@@ -27,6 +29,8 @@ export class PagesComponent {
           this.title.setTitle(this.breadcrumb);
         });
       });
+
+       this.selectedColor = this.themeService.color();
   }
 
   getChild(route: ActivatedRoute): ActivatedRoute {
