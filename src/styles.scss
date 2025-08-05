@@ -6,7 +6,12 @@ html {
 	color-scheme: light;
 	@include mat.theme((color: theme.$primary-palette));
 
-	@include mat.theme-overrides((corner-full: 5px, corner-extra-large: 5px));
+	//@include mat.theme-overrides((corner-full: 5px, corner-extra-large: 5px));
+
+	@include mat.button-overrides((filled-container-shape: 5px,
+				text-container-shape: 5px,
+				outlined-container-shape: 5px,
+				protected-container-shape: 5px));
 
 	@media (prefers-contrast: more) {
 		@include theme.high-contrast-overrides('light');
@@ -15,17 +20,26 @@ html {
 
 .tertiary {
 	@include mat.theme((color: theme.$tertiary-palette));
-	@include mat.theme-overrides((corner-full: 5px));
+	@include mat.button-overrides((filled-container-shape: 5px,
+				text-container-shape: 5px,
+				outlined-container-shape: 5px,
+				protected-container-shape: 5px));
 }
 
 .secondary {
 	@include mat.theme((color: theme.$secondary-palette));
-	@include mat.theme-overrides((corner-full: 5px));
+	@include mat.button-overrides((filled-container-shape: 5px,
+				text-container-shape: 5px,
+				outlined-container-shape: 5px,
+				protected-container-shape: 5px));
 }
 
 .error {
 	@include mat.theme((color: theme.$error-palette));
-	@include mat.theme-overrides((corner-full: 5px));
+	@include mat.button-overrides((filled-container-shape: 5px,
+				text-container-shape: 5px,
+				outlined-container-shape: 5px,
+				protected-container-shape: 5px));
 }
 
 .text-error {
