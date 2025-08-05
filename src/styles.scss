@@ -3,7 +3,7 @@
 @use 'theme-colors' as theme;
 
 html {
-	color-scheme: light;
+	color-scheme: light dark;
 	@include mat.theme((color: theme.$primary-palette));
 
 	//@include mat.theme-overrides((corner-full: 5px, corner-extra-large: 5px));
