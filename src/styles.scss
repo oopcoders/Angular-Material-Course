@@ -3,11 +3,6 @@
 @use 'theme-colors' as theme;
 
 html {
-	color-scheme: light dark;
-	@include mat.theme((color: theme.$primary-palette));
-
-	//@include mat.theme-overrides((corner-full: 5px, corner-extra-large: 5px));
-
 	@include mat.button-overrides((filled-container-shape: 5px,
 				text-container-shape: 5px,
 				outlined-container-shape: 5px,
@@ -18,16 +13,34 @@ html {
 	}
 }
 
-.red {
+.light-red {
+	color-scheme: light;
 	@include mat.theme((color: mat.$red-palette ));
 }
 
-.green {
+.dark-red {
+	color-scheme: dark;
+	@include mat.theme((color: mat.$red-palette ));
+}
+
+.light-blue {
+	color-scheme: light;
+	@include mat.theme((color: mat.$blue-palette ));
+}
+
+.dark-blue {
+	color-scheme: dark;
+	@include mat.theme((color: mat.$blue-palette ));
+}
+
+.light-green {
+	color-scheme: light;
 	@include mat.theme((color: mat.$green-palette ));
 }
 
-.blue {
-	@include mat.theme((color: mat.$blue-palette ));
+.dark-green {
+	color-scheme: dark;
+	@include mat.theme((color: mat.$green-palette ));
 }
 
 .tertiary {

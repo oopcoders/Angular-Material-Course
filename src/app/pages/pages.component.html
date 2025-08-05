@@ -5,4 +5,10 @@
 	<mat-radio-button value="red">Red</mat-radio-button>
 	<mat-radio-button value="blue">Blue</mat-radio-button>
 </mat-radio-group>
+
+<h4>Select a mode</h4>
+<mat-radio-group [(ngModel)]="selectedMode" (change)="themeService.setMode($event.value)">
+	<mat-radio-button value="light">Light Mode</mat-radio-button>
+	<mat-radio-button value="dark">Dark Mode</mat-radio-button>
+</mat-radio-group>
 <router-outlet></router-outlet>
