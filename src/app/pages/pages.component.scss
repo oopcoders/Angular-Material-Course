@@ -1,3 +1,11 @@
+@use '@angular/material' as mat;
+
+.toolbar {
+    @include mat.toolbar-overrides((container-background-color: var(--mat-sys-primary),
+            container-text-color: var(--mat-sys-on-primary),
+        ));
+}
+
 .toolbar-title {
     margin-left: 1rem;
 }
