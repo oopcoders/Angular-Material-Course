@@ -7,10 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { LoaderService } from '../services/loader.service';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-pages',
-  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink],
+  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink, MatToolbarModule],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss'
 })
@@ -32,8 +33,8 @@ export class PagesComponent {
         });
       });
 
-       this.selectedColor = this.themeService.color();
-       this.selectedMode = this.themeService.mode()
+    this.selectedColor = this.themeService.color();
+    this.selectedMode = this.themeService.mode()
   }
 
   getChild(route: ActivatedRoute): ActivatedRoute {

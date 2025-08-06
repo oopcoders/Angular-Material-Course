@@ -1,5 +1,9 @@
 <mat-sidenav-container class="sidenav-container"><!--hasBackdrop="false" -->
 	<mat-sidenav class="mainnav" mode="side" #mainnav opened>
+		<mat-toolbar>
+			<span>Menu</span>
+		</mat-toolbar>
+
 		<ul>
 			<li>
 				<a routerLink="">Dashboard</a>
@@ -19,6 +23,10 @@
 		</ul>
 	</mat-sidenav>
 	<mat-sidenav mode="over" #setting position="end">
+		<mat-toolbar>
+			<span>Settings</span>
+		</mat-toolbar>
+
 		<h4>Select a theme</h4>
 		<mat-radio-group [(ngModel)]="selectedColor" (change)="themeService.setColor($event.value)">
 			<mat-radio-button value="green">Green</mat-radio-button>
@@ -33,9 +41,12 @@
 		</mat-radio-group>
 	</mat-sidenav>
 	<section>
-		<span class="toolbar-title">{{ breadcrumb }}</span>
-		<button (click)="mainnav.toggle()">Toggle Main Nav</button>
-		<button (click)="setting.toggle()">Toggle Settings</button>
+		<mat-toolbar>
+			<button (click)="mainnav.toggle()">Toggle Main Nav</button>
+			<span class="toolbar-title">{{ breadcrumb }}</span>
+			<span class="spacer"></span>
+			<button (click)="setting.toggle()">Toggle Settings</button>
+		</mat-toolbar>
 		<router-outlet></router-outlet>
 	</section>
 </mat-sidenav-container>
