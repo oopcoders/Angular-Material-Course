@@ -51,6 +51,13 @@
 
 	</mat-sidenav>
 	<section>
+		@if (false) {
+		<div class="spinner-overlay">
+			<mat-spinner></mat-spinner>
+		</div>
+		}
+
+		<!-- <mat-progress-spinner mode="determinate" value="50"></mat-progress-spinner> -->
 		<mat-toolbar class="toolbar">
 			<button mat-mini-fab (click)="mainnav.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
 				<mat-icon>menu</mat-icon>
