@@ -57,7 +57,7 @@
 
         <mat-form-field class="half-width">
             <mat-label>Preferred Contact Date</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="contactDate">
+            <input matInput [matDatepickerFilter]="weekendFilter" [matDatepicker]="picker" formControlName="contactDate">
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
