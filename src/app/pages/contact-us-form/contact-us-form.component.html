@@ -1,22 +1,18 @@
 <div class="form-wrapper">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <mat-form-field>
-            <!--  No control added yet — this causes an error. The application is in a broken state.
-                   We’ll use this container to add Angular Material components like input, select, and textarea. -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-grid">
+        <mat-form-field class="half-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
         </mat-form-field>
-        <div>
-            <label for="name">Name:</label>
-            <input formControlName="name" required>
+        <mat-form-field class="half-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required type="email">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message"></textarea>
+        </mat-form-field>
 
-            <label for="email">Email:</label>
-            <input formControlName="email" required type="email">
-
-        </div>
-
-        <div>
-            <label for="message">Message:</label>
-            <textarea formControlName="message"></textarea>
-        </div>
 
 
         <div>
