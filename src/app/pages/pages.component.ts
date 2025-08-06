@@ -9,10 +9,11 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-pages',
-  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink, MatToolbarModule, MatListModule],
+  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink, MatToolbarModule, MatListModule, MatIconModule],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss'
 })

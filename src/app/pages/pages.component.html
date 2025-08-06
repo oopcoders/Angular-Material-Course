@@ -4,11 +4,26 @@
 			<span>Menu</span>
 		</mat-toolbar>
 		<mat-nav-list role="list">
-			<a mat-list-item routerLink="">Dashboard</a>
-			<a mat-list-item routerLink="/contact">Contact Us</a>
-			<a mat-list-item routerLink="/user">User Profile Manager</a>
-			<a mat-list-item routerLink="/data">Data Display</a>
-			<a mat-list-item routerLink="/kanban">Kanban Board Mini</a>
+			<mat-list-item>
+				<mat-icon matListItemIcon>dashboard</mat-icon>
+				<a matListItemTitle routerLink="">Dashboard</a>
+			</mat-list-item>
+			<mat-list-item>
+				<mat-icon matListItemIcon>contact_mail</mat-icon>
+				<a matListItemTitle routerLink="/contact">Contact Us</a>
+			</mat-list-item>
+			<mat-list-item>
+				<mat-icon matListItemIcon>person</mat-icon>
+				<a matListItemTitle routerLink="/user">User Profile Manager</a>
+			</mat-list-item>
+			<mat-list-item>
+				<mat-icon matListItemIcon>save</mat-icon>
+				<a matListItemTitle routerLink="/data">Data Display</a>
+			</mat-list-item>
+			<mat-list-item>
+				<mat-icon matListItemIcon>task</mat-icon>
+				<a matListItemTitle routerLink="/kanban">Kanban Board Mini</a>
+			</mat-list-item>
 		</mat-nav-list>
 	</mat-sidenav>
 	<mat-sidenav mode="over" #setting position="end">
@@ -37,10 +52,14 @@
 	</mat-sidenav>
 	<section>
 		<mat-toolbar class="toolbar">
-			<button (click)="mainnav.toggle()">Toggle Main Nav</button>
+			<button (click)="mainnav.toggle()">
+				<mat-icon>menu</mat-icon>
+			</button>
 			<span class="toolbar-title">{{ breadcrumb }}</span>
 			<span class="spacer"></span>
-			<button (click)="setting.toggle()">Toggle Settings</button>
+			<button (click)="setting.toggle()">
+				<mat-icon>tune</mat-icon>
+			</button>
 		</mat-toolbar>
 		<router-outlet></router-outlet>
 	</section>
