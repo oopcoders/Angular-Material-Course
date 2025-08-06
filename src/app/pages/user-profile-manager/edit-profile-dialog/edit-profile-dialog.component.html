@@ -1,16 +1,18 @@
-<h2>Edit Profile</h2>
-<form [formGroup]="form" (ngSubmit)="save()" class="form-grid">
-    <div class="full-width">
-        <label>Name</label>
-        <input formControlName="name">
-    </div>
-    <div class="full-width">
-        <label>Bio</label>
-        <textarea formControlName="bio"></textarea>
-    </div>
+<h2 mat-dialog-title>Edit Profile</h2>
+<form [formGroup]="form" (ngSubmit)="save()">
+    <mat-dialog-content class="form-grid">
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
 
-    <div>
-        <button>Cancel</button>
-        <button [disabled]="form.invalid">Update</button>
-    </div>
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Bio</mat-label>
+            <textarea matInput formControlName="bio"></textarea>
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true">Update</button>
+    </mat-dialog-actions>
 </form>

@@ -1,11 +1,14 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog'
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog'
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
   selector: 'app-edit-profile-dialog',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatDialogModule, MatInputModule, MatFormFieldModule, MatButtonModule],
   templateUrl: './edit-profile-dialog.component.html',
   styleUrl: './edit-profile-dialog.component.scss'
 })
