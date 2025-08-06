@@ -6,10 +6,11 @@ import { ThemeService } from '../services/theme.service';
 import { FormsModule } from '@angular/forms';
 import { LoaderService } from '../services/loader.service';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-pages',
-  imports: [RouterOutlet, FormsModule, MatRadioModule],
+  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss'
 })

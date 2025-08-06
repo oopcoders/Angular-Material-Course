@@ -1,14 +1,41 @@
-<span class="toolbar-title">{{ breadcrumb }}</span>
-<h4>Select a theme</h4>
-<mat-radio-group [(ngModel)]="selectedColor" (change)="themeService.setColor($event.value)">
-	<mat-radio-button value="green">Green</mat-radio-button>
-	<mat-radio-button value="red">Red</mat-radio-button>
-	<mat-radio-button value="blue">Blue</mat-radio-button>
-</mat-radio-group>
+<mat-sidenav-container class="sidenav-container">
+	<mat-sidenav #mainnav opened>
+		<ul>
+			<li>
+				<a routerLink="">Dashboard</a>
+			</li>
+			<li>
+				<a routerLink="/contact">Contact Us</a>
+			</li>
+			<li>
+				<a routerLink="/user">User Profile Manager</a>
+			</li>
+			<li>
+				<a routerLink="/data">Data Display</a>
+			</li>
+			<li>
+				<a routerLink="/kanban">Kanban Board Mini</a>
+			</li>
+		</ul>
+	</mat-sidenav>
+	<mat-sidenav #setting position="end">
+		<h4>Select a theme</h4>
+		<mat-radio-group [(ngModel)]="selectedColor" (change)="themeService.setColor($event.value)">
+			<mat-radio-button value="green">Green</mat-radio-button>
+			<mat-radio-button value="red">Red</mat-radio-button>
+			<mat-radio-button value="blue">Blue</mat-radio-button>
+		</mat-radio-group>
 
-<h4>Select a mode</h4>
-<mat-radio-group [(ngModel)]="selectedMode" (change)="themeService.setMode($event.value)">
-	<mat-radio-button value="light">Light Mode</mat-radio-button>
-	<mat-radio-button value="dark">Dark Mode</mat-radio-button>
-</mat-radio-group>
-<router-outlet></router-outlet>
+		<h4>Select a mode</h4>
+		<mat-radio-group [(ngModel)]="selectedMode" (change)="themeService.setMode($event.value)">
+			<mat-radio-button value="light">Light Mode</mat-radio-button>
+			<mat-radio-button value="dark">Dark Mode</mat-radio-button>
+		</mat-radio-group>
+	</mat-sidenav>
+	<section>
+		<span class="toolbar-title">{{ breadcrumb }}</span>
+		<button (click)="mainnav.toggle()">Toggle Main Nav</button>
+		<button (click)="setting.toggle()">Toggle Settings</button>
+		<router-outlet></router-outlet>
+	</section>
+</mat-sidenav-container>
