@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialog } from '@angular/material/dialog';
+import { EditProfileDialogComponent } from './edit-profile-dialog/edit-profile-dialog.component';
 
 @Component({
   selector: 'app-user-profile-manager',
@@ -10,13 +12,18 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class UserProfileManagerComponent {
 
+  readonly dialog = inject(MatDialog);
+
   user = {
     name: 'John Doe',
     bio: 'Angular developer & UI designer.'
   };
 
   openDialog(): void {
-
+    this.dialog.open(EditProfileDialogComponent, {
+      height: '400px',
+      width: '600px',
+    });
   }
 
 }
