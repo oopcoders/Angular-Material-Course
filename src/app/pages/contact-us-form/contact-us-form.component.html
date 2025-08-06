@@ -3,10 +3,26 @@
         <mat-form-field class="half-width">
             <mat-label>Name</mat-label>
             <input matInput formControlName="name" required>
+            @if (form.get('name')?.hasError('required')) {
+            <mat-error>
+                Name is required
+            </mat-error>
+            }
         </mat-form-field>
         <mat-form-field class="half-width">
             <mat-label>Email</mat-label>
             <input matInput formControlName="email" required type="email">
+            @if (form.get('email')?.hasError('required')) {
+            <mat-error>
+                Email is required
+            </mat-error>
+            }
+            @if (form.get('email')?.hasError('email')) {
+            <mat-error>
+                Please enter a valid email
+            </mat-error>
+            }
+
         </mat-form-field>
         <mat-form-field class="full-width">
             <mat-label>Message</mat-label>
