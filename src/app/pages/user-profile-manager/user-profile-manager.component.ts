@@ -23,6 +23,7 @@ export class UserProfileManagerComponent {
     this.dialog.open(EditProfileDialogComponent, {
       height: '400px',
       width: '600px',
+      data: this.user
     });
   }
 

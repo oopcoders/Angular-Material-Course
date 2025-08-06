@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog'
 
 
 @Component({
@@ -12,12 +13,13 @@ export class EditProfileDialogComponent {
   form: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    @Inject(MAT_DIALOG_DATA) public data: { name: string, bio: string }
   ) {
 
     this.form = this.fb.group({
-      name: ['', Validators.required],
-      bio: ['']
+      name: [this.data.name, Validators.required],
+      bio: [this.data.bio]
     });
   }
 
