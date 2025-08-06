@@ -1,55 +1,61 @@
 <h2 class="text-error">Welcome!</h2>
 <p>This is a basic admin layout using Angular Material 19.</p>
 
-<mat-grid-list cols="2" rowHeight="150px">
-	<mat-grid-tile>1</mat-grid-tile>
-	<mat-grid-tile>2</mat-grid-tile>
-	<mat-grid-tile rowspan="2">3</mat-grid-tile>
-	<mat-grid-tile rowspan="2">4</mat-grid-tile>
+<mat-grid-list cols="2" rowHeight="180px" gutterSize="5">
+	<mat-grid-tile>
+		<mat-grid-tile-header>Button Colors</mat-grid-tile-header>
+		<div>
+			<button mat-flat-button>Primary</button>
+			<button mat-flat-button class="tertiary">Tertiary</button>
+			<button mat-flat-button class="secondary">Secondary</button>
+			<button mat-flat-button class="error">Error</button>
+		</div>
+	</mat-grid-tile>
+	<mat-grid-tile>
+		<mat-grid-tile-header>Basic Buttons</mat-grid-tile-header>
+		<div>
+			<button mat-button>Basic</button>
+			<button mat-button disabled>Disabled</button>
+			<a mat-button href="/">Link</a>
+		</div>
+	</mat-grid-tile>
+	<mat-grid-tile rowspan="2">
+		<mat-grid-tile-header>Button Types</mat-grid-tile-header>
+		<div>
+			<p>Flat Buttons</p>
+			<button mat-flat-button>Basic</button>
+			<button mat-flat-button disabled>Disabled</button>
+			<a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+
+			<p>Stroked Buttons</p>
+			<button mat-stroked-button>Basic</button>
+			<button mat-stroked-button disabled>Disabled</button>
+			<a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+
+			<p>Raised Buttons</p>
+			<button mat-raised-button>Basic</button>
+			<button mat-raised-button disabled>Disabled</button>
+			<a mat-flat-raised href="https://www.google.com/" target="_blank">Link</a>
+		</div>
+	</mat-grid-tile>
+	<mat-grid-tile rowspan="2">
+		<mat-grid-tile-header>Button Other</mat-grid-tile-header>
+		<div>
+			<p>Custom Theme Builder</p>
+			<button class="theme-builder" mat-flat-button>Basic</button>
+			<button class="theme-builder" mat-flat-button disabled>Disabled</button>
+			<a class="theme-builder" mat-flat-button
+			   href="https://themes.angular-material.dev/?bold-font-weight=700&brand-font-family=Roboto&medium-font-weight=500&plain-font-family=Roboto&regular-font-weight=400&seed-error=%23FF5449&seed-neutral=%23938F94&seed-neutral-variant=%23948F99&seed-primary=%236750A4&seed-secondary=%23958DA4&seed-tertiary=%23B58392"
+			   target="_blank">Theme
+				Builder</a>
+
+
+			<p>Toggle Button Component</p>
+			<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+				<mat-button-toggle value="bold">Bold</mat-button-toggle>
+				<mat-button-toggle value="italic">Italic</mat-button-toggle>
+				<mat-button-toggle value="underline">Underline</mat-button-toggle>
+			</mat-button-toggle-group>
+		</div>
+	</mat-grid-tile>
 </mat-grid-list>
-
-
-
-
-<h4>Button Component</h4>
-<p>Button Colors</p>
-<button mat-flat-button>Primary</button>
-<button mat-flat-button class="tertiary">Tertiary</button>
-<button mat-flat-button class="secondary">Secondary</button>
-<button mat-flat-button class="error">Error</button>
-
-<p>Basic Buttons</p>
-<button mat-button>Basic</button>
-<button mat-button disabled>Disabled</button>
-<a mat-button href="/">Link</a>
-
-<p>Flat Buttons</p>
-<button mat-flat-button>Basic</button>
-<button mat-flat-button disabled>Disabled</button>
-<a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
-
-<p>Stroked Buttons</p>
-<button mat-stroked-button>Basic</button>
-<button mat-stroked-button disabled>Disabled</button>
-<a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
-
-<p>Raised Buttons</p>
-<button mat-raised-button>Basic</button>
-<button mat-raised-button disabled>Disabled</button>
-<a mat-flat-raised href="https://www.google.com/" target="_blank">Link</a>
-
-<h4>Custom Theme Builder</h4>
-<button class="theme-builder" mat-flat-button>Basic</button>
-<button class="theme-builder" mat-flat-button disabled>Disabled</button>
-<a class="theme-builder" mat-flat-button
-   href="https://themes.angular-material.dev/?bold-font-weight=700&brand-font-family=Roboto&medium-font-weight=500&plain-font-family=Roboto&regular-font-weight=400&seed-error=%23FF5449&seed-neutral=%23938F94&seed-neutral-variant=%23948F99&seed-primary=%236750A4&seed-secondary=%23958DA4&seed-tertiary=%23B58392"
-   target="_blank">Theme
-	Builder</a>
-
-
-<h4>Toggle Button Component</h4>
-<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-	<mat-button-toggle value="bold">Bold</mat-button-toggle>
-	<mat-button-toggle value="italic">Italic</mat-button-toggle>
-	<mat-button-toggle value="underline">Underline</mat-button-toggle>
-</mat-button-toggle-group>
