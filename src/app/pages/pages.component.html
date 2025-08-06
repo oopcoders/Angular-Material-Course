@@ -17,7 +17,7 @@
 		</mat-toolbar>
 
 		<mat-list role="list">
-			<mat-list-item role="listitem">
+			<mat-list-item class="setting-list-item" role="listitem">
 				<h4 matListItemTitle>Select a theme</h4>
 				<mat-radio-group [(ngModel)]="selectedColor" (change)="themeService.setColor($event.value)">
 					<mat-radio-button value="green">Green</mat-radio-button>
@@ -25,7 +25,7 @@
 					<mat-radio-button value="blue">Blue</mat-radio-button>
 				</mat-radio-group>
 			</mat-list-item>
-			<mat-list-item role="listitem">
+			<mat-list-item class="setting-list-item" role="listitem">
 				<h4 matListItemTitle>Select a mode</h4>
 				<mat-radio-group [(ngModel)]="selectedMode" (change)="themeService.setMode($event.value)">
 					<mat-radio-button value="light">Light Mode</mat-radio-button>
