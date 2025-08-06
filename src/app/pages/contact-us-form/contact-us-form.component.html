@@ -39,15 +39,13 @@
         </mat-form-field>
 
 
-        <div>
-            <input formControlName="priority" type="radio" name="priority" value="low" id="low" />
-            <label for="low">Low</label>
-
-            <input formControlName="priority" type="radio" name="priority" value="medium" id="medium" />
-            <label for="medium">Medium</label>
-
-            <input formControlName="priority" type="radio" name="priority" value="high" id="high" />
-            <label for="high">high</label>
+        <div class="half-width">
+            <label>Priority</label>
+            <mat-radio-group formControlName="priority">
+                <mat-radio-button value="low">Low</mat-radio-button>
+                <mat-radio-button value="medium">Medium</mat-radio-button>
+                <mat-radio-button value="high">High</mat-radio-button>
+            </mat-radio-group>
         </div>
 
         <div>

@@ -3,10 +3,11 @@ import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angula
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 @Component({
   selector: 'app-contact-us-form',
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatSelectModule],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatRadioModule],
   templateUrl: './contact-us-form.component.html',
   styleUrl: './contact-us-form.component.scss'
 })
