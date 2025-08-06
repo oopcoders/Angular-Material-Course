@@ -7,10 +7,12 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-contact-us-form',
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule,
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule,
     MatSelectModule, MatRadioModule, MatCheckboxModule, MatDatepickerModule],
   providers: [provideNativeDateAdapter()],
   templateUrl: './contact-us-form.component.html',

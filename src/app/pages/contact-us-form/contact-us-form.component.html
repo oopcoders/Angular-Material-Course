@@ -63,7 +63,9 @@
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-        <button type="submit" [disabled]="form.invalid">
+        <!--Version 20 : matFab  -- Version 19 : mat-fab-->
+        <button class="submit-button" mat-fab extended type="submit" [disabled]="form.invalid">
+            <mat-icon>send</mat-icon>
             Submit
         </button>
     </form>
