@@ -29,16 +29,14 @@
             <textarea matInput formControlName="message"></textarea>
         </mat-form-field>
 
-
-
-        <div>
-            <label for="topics">Topic</label>
-            <select name="topics" id="topics">
-                <option value="support">Support</option>
-                <option value="sales">Sales</option>
-                <option value="feedback">Feedback</option>
-            </select>
-        </div>
+        <mat-form-field class="half-width">
+            <mat-label>Topic</mat-label>
+            <mat-select formControlName="topic">
+                <mat-option value="support">Support</mat-option>
+                <mat-option value="sales">Sales</mat-option>
+                <mat-option value="feedback">Feedback</mat-option>
+            </mat-select>
+        </mat-form-field>
 
 
         <div>

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-contact-us-form',
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatSelectModule],
   templateUrl: './contact-us-form.component.html',
   styleUrl: './contact-us-form.component.scss'
 })
