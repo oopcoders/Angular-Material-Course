@@ -54,10 +54,14 @@
             </mat-checkbox>
         </div>
 
-        <div class="form-field">
-            <label for="contact-date">Preferred Contact Date</label>
-            <input type="date" formControlName="contactDate" id="contact-date" name="contact-date">
-        </div>
+
+        <mat-form-field class="half-width">
+            <mat-label>Preferred Contact Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="contactDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
 
         <button type="submit" [disabled]="form.invalid">
             Submit
