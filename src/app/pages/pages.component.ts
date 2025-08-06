@@ -8,10 +8,11 @@ import { LoaderService } from '../services/loader.service';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-pages',
-  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink, MatToolbarModule],
+  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink, MatToolbarModule, MatListModule],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss'
 })

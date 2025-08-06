@@ -3,42 +3,37 @@
 		<mat-toolbar class="toolbar">
 			<span>Menu</span>
 		</mat-toolbar>
-
-		<ul>
-			<li>
-				<a routerLink="">Dashboard</a>
-			</li>
-			<li>
-				<a routerLink="/contact">Contact Us</a>
-			</li>
-			<li>
-				<a routerLink="/user">User Profile Manager</a>
-			</li>
-			<li>
-				<a routerLink="/data">Data Display</a>
-			</li>
-			<li>
-				<a routerLink="/kanban">Kanban Board Mini</a>
-			</li>
-		</ul>
+		<mat-nav-list role="list">
+			<a mat-list-item routerLink="">Dashboard</a>
+			<a mat-list-item routerLink="/contact">Contact Us</a>
+			<a mat-list-item routerLink="/user">User Profile Manager</a>
+			<a mat-list-item routerLink="/data">Data Display</a>
+			<a mat-list-item routerLink="/kanban">Kanban Board Mini</a>
+		</mat-nav-list>
 	</mat-sidenav>
 	<mat-sidenav mode="over" #setting position="end">
 		<mat-toolbar class="toolbar">
 			<span>Settings</span>
 		</mat-toolbar>
 
-		<h4>Select a theme</h4>
-		<mat-radio-group [(ngModel)]="selectedColor" (change)="themeService.setColor($event.value)">
-			<mat-radio-button value="green">Green</mat-radio-button>
-			<mat-radio-button value="red">Red</mat-radio-button>
-			<mat-radio-button value="blue">Blue</mat-radio-button>
-		</mat-radio-group>
+		<mat-list role="list">
+			<mat-list-item role="listitem">
+				<h4 matListItemTitle>Select a theme</h4>
+				<mat-radio-group [(ngModel)]="selectedColor" (change)="themeService.setColor($event.value)">
+					<mat-radio-button value="green">Green</mat-radio-button>
+					<mat-radio-button value="red">Red</mat-radio-button>
+					<mat-radio-button value="blue">Blue</mat-radio-button>
+				</mat-radio-group>
+			</mat-list-item>
+			<mat-list-item role="listitem">
+				<h4 matListItemTitle>Select a mode</h4>
+				<mat-radio-group [(ngModel)]="selectedMode" (change)="themeService.setMode($event.value)">
+					<mat-radio-button value="light">Light Mode</mat-radio-button>
+					<mat-radio-button value="dark">Dark Mode</mat-radio-button>
+				</mat-radio-group>
+			</mat-list-item>
+		</mat-list>
 
-		<h4>Select a mode</h4>
-		<mat-radio-group [(ngModel)]="selectedMode" (change)="themeService.setMode($event.value)">
-			<mat-radio-button value="light">Light Mode</mat-radio-button>
-			<mat-radio-button value="dark">Dark Mode</mat-radio-button>
-		</mat-radio-group>
 	</mat-sidenav>
 	<section>
 		<mat-toolbar class="toolbar">
