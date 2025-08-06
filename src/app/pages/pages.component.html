@@ -1,5 +1,5 @@
-<mat-sidenav-container class="sidenav-container">
-	<mat-sidenav #mainnav opened>
+<mat-sidenav-container class="sidenav-container"><!--hasBackdrop="false" -->
+	<mat-sidenav class="mainnav" mode="side" #mainnav opened>
 		<ul>
 			<li>
 				<a routerLink="">Dashboard</a>
@@ -18,7 +18,7 @@
 			</li>
 		</ul>
 	</mat-sidenav>
-	<mat-sidenav #setting position="end">
+	<mat-sidenav mode="over" #setting position="end">
 		<h4>Select a theme</h4>
 		<mat-radio-group [(ngModel)]="selectedColor" (change)="themeService.setColor($event.value)">
 			<mat-radio-button value="green">Green</mat-radio-button>
