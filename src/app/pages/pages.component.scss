@@ -16,6 +16,10 @@
     bottom: 0;
     left: 0;
     right: 0;
+
+    mat-sidenav {
+        @include mat.sidenav-overrides((container-shape: 0px));
+    }
 }
 
 .mainnav {
