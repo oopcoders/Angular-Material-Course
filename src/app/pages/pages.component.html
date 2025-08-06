@@ -52,12 +52,12 @@
 	</mat-sidenav>
 	<section>
 		<mat-toolbar class="toolbar">
-			<button (click)="mainnav.toggle()">
+			<button mat-mini-fab (click)="mainnav.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
 				<mat-icon>menu</mat-icon>
 			</button>
 			<span class="toolbar-title">{{ breadcrumb }}</span>
 			<span class="spacer"></span>
-			<button (click)="setting.toggle()">
+			<button mat-mini-fab (click)="setting.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
 				<mat-icon>tune</mat-icon>
 			</button>
 		</mat-toolbar>

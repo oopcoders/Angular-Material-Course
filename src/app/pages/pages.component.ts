@@ -10,10 +10,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-pages',
-  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule, RouterLink, MatToolbarModule, MatListModule, MatIconModule],
+  imports: [RouterOutlet, FormsModule, MatRadioModule, MatSidenavModule,
+    RouterLink, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss'
 })
