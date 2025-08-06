@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [MatButtonModule, MatButtonToggleModule],
+  imports: [MatButtonModule, MatButtonToggleModule, MatGridListModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
