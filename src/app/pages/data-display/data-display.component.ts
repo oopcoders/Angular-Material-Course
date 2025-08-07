@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 export interface Product {
   id: number;
@@ -29,11 +30,11 @@ const PRODUCT_DATA: Product[] = [
 
 @Component({
   selector: 'app-data-display',
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule],
   templateUrl: './data-display.component.html',
   styleUrl: './data-display.component.scss'
 })
 export class DataDisplayComponent {
-
+  dataSource: Product[] = PRODUCT_DATA
 
 }
