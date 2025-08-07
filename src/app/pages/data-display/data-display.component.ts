@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
 export interface Product {
   id: number;
@@ -31,12 +32,19 @@ const PRODUCT_DATA: Product[] = [
 
 @Component({
   selector: 'app-data-display',
-  imports: [CommonModule, MatCardModule, MatTableModule],
+  imports: [CommonModule, MatCardModule, MatTableModule, MatPaginatorModule],
   templateUrl: './data-display.component.html',
   styleUrl: './data-display.component.scss'
 })
-export class DataDisplayComponent {
+export class DataDisplayComponent implements AfterViewInit {
   columnsToDisplay: string[] = ['id', 'name', 'category', 'price', 'stock'];
-  dataSource: Product[] = PRODUCT_DATA
+
+  dataSource = new MatTableDataSource<Product>(PRODUCT_DATA);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
 }

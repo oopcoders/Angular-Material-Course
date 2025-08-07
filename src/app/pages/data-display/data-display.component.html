@@ -32,6 +32,9 @@
             <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
             <tr mat-row *matRowDef="let rowData; columns: columnsToDisplay"></tr>
         </table>
+
+        <mat-paginator showFirstLastButtons [length]="15" [pageSize]="10" [pageSizeOptions]="[5, 10]" aria-label="Select page">
+        </mat-paginator>
     </mat-card>
     <!-- <h2>Product Inventory</h2>
     <table>
