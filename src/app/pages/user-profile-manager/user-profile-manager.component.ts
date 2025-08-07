@@ -20,11 +20,17 @@ export class UserProfileManagerComponent {
   };
 
   openDialog(): void {
-    this.dialog.open(EditProfileDialogComponent, {
+    const dialogRef = this.dialog.open(EditProfileDialogComponent, {
       height: '400px',
       width: '600px',
       data: this.user
     });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.user = result
+      }
+    })
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog'
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog'
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,7 +17,8 @@ export class EditProfileDialogComponent {
 
   constructor(
     private fb: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) public data: { name: string, bio: string }
+    @Inject(MAT_DIALOG_DATA) public data: { name: string, bio: string },
+    public dialogRef: MatDialogRef<EditProfileDialogComponent>
   ) {
 
     this.form = this.fb.group({
@@ -27,8 +28,11 @@ export class EditProfileDialogComponent {
   }
 
   save() {
-    if (this.form.valid) {
-      console.log(this.form.value)
+    if (this.form.value.name !== "test") {
+      this.dialogRef.close(this.form.value);
+      console.log("Form data sent");
+    } else {
+      console.log("Unable to close form, form name can't be the value of test")
     }
   }
 }
