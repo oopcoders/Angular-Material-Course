@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
-import { CdkDrag, CdkDropList, CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDropListGroup, CdkDrag, CdkDropList, CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-kanban-mini',
   templateUrl: './kanban-mini.component.html',
   styleUrl: './kanban-mini.component.scss',
-  imports: [CdkDrag, CdkDropList]
+  imports: [CdkDropListGroup, CdkDrag, CdkDropList]
 })
 export class KanbanMiniComponent {
   todo = [
     'Get to work',
     'Pick up groceries',
     'Go home',
-    'Fall asleep'
   ];
+
+  inProgress = [
+    'Fall asleep'
+  ]
 
   done = [
     'Get up',
@@ -28,9 +31,9 @@ export class KanbanMiniComponent {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(event.previousContainer.data,
-          event.container.data,
-          event.previousIndex,
-          event.currentIndex);
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
     }
   }
 }
