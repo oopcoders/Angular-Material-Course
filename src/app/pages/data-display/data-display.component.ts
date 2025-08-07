@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 
 export interface Product {
   id: number;
@@ -32,7 +33,7 @@ const PRODUCT_DATA: Product[] = [
 
 @Component({
   selector: 'app-data-display',
-  imports: [CommonModule, MatCardModule, MatTableModule, MatPaginatorModule],
+  imports: [CommonModule, MatCardModule, MatTableModule, MatPaginatorModule, MatSortModule],
   templateUrl: './data-display.component.html',
   styleUrl: './data-display.component.scss'
 })
@@ -42,9 +43,11 @@ export class DataDisplayComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<Product>(PRODUCT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
 }
