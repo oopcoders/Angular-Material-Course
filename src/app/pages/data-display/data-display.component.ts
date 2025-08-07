@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 export interface Product {
   id: number;
@@ -30,11 +31,12 @@ const PRODUCT_DATA: Product[] = [
 
 @Component({
   selector: 'app-data-display',
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, MatCardModule, MatTableModule],
   templateUrl: './data-display.component.html',
   styleUrl: './data-display.component.scss'
 })
 export class DataDisplayComponent {
+  columnsToDisplay: string[] = ['id', 'name', 'category', 'price', 'stock'];
   dataSource: Product[] = PRODUCT_DATA
 
 }
